@@ -1,67 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
+:root {
+    /*typography*/
+    --font-family: 'Outfit', sans-serif;
+    --h1-font-size: 1.5rem;
+    --p-font-size: .9375rem;
+    --font-normal: 400;
+    --font-bold: 700;
+    /*color*/
+    --body-color: hsl(212, 45%, 89%); 
+    --card-color: hsl(0, 0%, 100%);
+    --h1-color: hsl(218, 44%, 22%);
+    --p-color: hsl(220, 15%, 55%);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#qr-code {
-    width: 250px;
-    height: 250px;
-    border-radius: 8px;
-    margin-bottom: 24px;
+.qr-code {
+    max-width: 100%;
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
 }
 
-h3 {
-    color: hsl(218, 44%, 22%);
-    font-weight: 700;
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-bold);
+    color: var(--h1-color);
+    margin-bottom: 1.25rem;
 }
 
 p {
-    font-size: 15px;
-    font-weight: 400;
-    color:  hsl(220, 15%, 55%);
+    font-size: var(--p-font-size);
+    font-weight: var(--font-normal);
+    color: var(--p-color);
+    padding: 0 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
-    background-color: hsl(212, 45%, 89%);
+    font-family: var(--font-family);
+    background-color: var(--body-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
-    width: 1440px;
-    margin: auto;
+    min-height: 100vh;
 }
 
 .card-container {
-    background-color: hsl(0, 0%, 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    border-radius: 16px;
-    padding: 12px;
+    background-color: var(--card-color);
+    border-radius: 1rem;
+    padding: 1.125rem;
+    max-width: 20rem;
+    box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 15%);
 }
 
-.text-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 18px;
-    padding: 0 4px;
-    margin-bottom: 28px;
-    width: 250px;
-}
-
-.attribution {
+footer {
     position: sticky;
     top: 100%;
+    padding-bottom: 10px;
 }
 
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: .6875rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
